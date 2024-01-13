@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+} 
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 1rem;   
+    background: #171515;
+}
+
+.text1{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 50px;
+    color: #f4c194;
+    font-family: 'Oswald', sans-serif;
+}   
+
+.text1::before{
+    content: "Mis ";
+    color: #ffffff;
+    margin-right: 7px;
+}
+
+.quiensoy{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    color: white;
+}
+
+.quiensoy p{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.quiensoy img{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.skils{
+    width: 50%;
+    height: 80%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 150px 150px 150px;
+    place-items: center;
+}
+
+.tecnologia{
+    width: 110px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #262424;
+    color: white;
+    border-radius: 20px;
+}
+
+.tecnologia img{
+    width: 90px;
+    height: fit-content;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 1287px){
+ .container{
+    justify-content: space-around;
+    flex-direction: column;
+ }
+
+ .quiensoy{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+ }
+
+ .skils{
+    width: 100%;
+    height: 60%;
+ }
+
+}
+
+@media(max-width: 550px){
+    .container{
+        height: 150vh;
+    }
+
+    .quiensoy{
+        width: 100%;
+    }
+
+    .text1{
+        padding: 20px;
+    }
+
+    .quiensoy p{
+        height: fit-content;
+        padding: 20px;
+    }
+
+    .skils{
+        width: 100%;
+        height: fit-content;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 150px 150px 150px 150px 150px 150px;
+     }
+}
