@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #1a1a1a;
+    background: #171515;
 }
 
 .home{
@@ -204,10 +204,10 @@
 
   .buttonn{
     display: none;
-  }
+  } 
 
   .buttonnRes{
-    width: 40px;
+    width: 70px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -215,6 +215,7 @@
     background: rgb(196, 65, 65);
     border:solid 1px rgb(196, 65, 65);
     color: white;
+    text-decoration: none;  
   }
 
 }

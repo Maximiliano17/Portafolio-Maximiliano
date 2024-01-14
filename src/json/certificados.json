@@ -1,0 +1,38 @@
+[
+    {
+      "nombre": "Tecnico en informatica personal y profecional",
+      "img": "../assets/certificado.png",
+      "url": "https://www.ejemplo.com/certificado1"
+    },
+    {
+      "nombre": "Feria de ciencias",
+      "img": "imagen2.jpg",
+      "url": "https://www.ejemplo.com/certificado2"
+    },
+    {
+      "nombre": "Certificado de 3",
+      "img": "imagen3.jpg",
+      "url": "https://www.ejemplo.com/certificado3"
+    },
+    {
+      "nombre": "Certificado de 4",
+      "img": "imagen4.jpg",
+      "url": "https://www.ejemplo.com/certificado4"
+    },
+    {
+      "nombre": "Certificado de 5",
+      "img": "imagen5.jpg",
+      "url": "https://www.ejemplo.com/certificado5"
+    },
+    {
+      "nombre": "Certificado de 6",
+      "img": "imagen6.jpg",
+      "url": "https://www.ejemplo.com/certificado6"
+    },
+    {
+      "nombre": "Certificado de 7",
+      "img": "imagen7.jpg",
+      "url": "https://www.ejemplo.com/certificado7"
+    }
+]
+  

@@ -12,6 +12,9 @@ import kotlin from "../assets/iconos/kotlin.png"
 import git from "../assets/iconos/git.png"
 import typeScript from "../assets/iconos/type.png"
 import mongodb from "../assets/iconos/mongodb.png"
+import ex from "../assets/iconos/EX.png"
+import npm from "../assets/iconos/npm.png"
+import boos from "../assets/iconos/boostrap.png"
 
 function QuienSoy() {
  
@@ -67,6 +70,21 @@ function QuienSoy() {
         </article>
         <article className={styles.tecnologia}>
         <img src={mongodb} alt="MongoDB" />
+          
+        </article>
+
+        <article className={styles.tecnologia}>
+        <img src={ex} alt="Express" />
+          
+        </article>
+
+        <article className={styles.tecnologia}>
+        <img src={boos} alt="Boostrap" />
+          
+        </article>
+
+        <article className={styles.tecnologia}>
+        <img src={npm} alt="Npm" />
           
         </article>
        </section>
