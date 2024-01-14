@@ -2,7 +2,7 @@
 import styles from "../modules/Certificados.module.css";
 //JSON
 import certificadosData from "../json/certificados.json";
-
+ 
 function Certificados() {
   return (
     <>
@@ -16,6 +16,6 @@ function Certificados() {
       </div>
     </>
   );
-}
+} 
 
 export default Certificados;
