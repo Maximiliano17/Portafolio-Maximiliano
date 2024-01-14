@@ -5,6 +5,7 @@ import fotoPerfil from "../assets/fotos/fotoPerfil2.png"
 //Componetes
 import SobreMi from "./SobreMi"
 import QuienSoy from "./QuienSoy"
+import cv from "../../public/CV Maximilinao Dos Santos Desarrollador Web.pdf"
 
 function Home() {
  
@@ -32,9 +33,19 @@ function Home() {
               GitHub
             </a>
 
+           <a className={styles.buttonn} href="../../public/CV Maximilinao Dos Santos Desarrollador Web.pdf" download="CV Maximilinao Dos Santos Desarrollador Web.pdf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+              <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+            </svg>
+            </a>
+
            {/* Res */}
             <a className={styles.linkedinRes} href="https://www.linkedin.com/in/maximilianodossantos/" target="_blanck">In</a>
             <a className={styles.githubRes} href="https://github.com/Maximiliano17" target="_blanck">git</a>
+            <a className={styles.buttonnRes} href="../../public/CV Maximilinao Dos Santos Desarrollador Web.pdf" download="CV Maximilinao Dos Santos Desarrollador Web.pdf">
+             Cv
+            </a>
            </div>
          </div>
          </section>

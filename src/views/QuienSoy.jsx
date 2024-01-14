@@ -22,8 +22,7 @@ function QuienSoy() {
         {/* <img src={skils} alt="Skils Icon" /> */}
         <h2 className={styles.text1}> Skils</h2>
         <p>
-         Eh trabajado con tecnologias tanto del lado del front end como back end, esto en paginas web, sistemas web, apps mobiles, etc. mi dominio de estas tecnologias me a permitido crear proyetos ganadores de premios, y trabajar con diferentes instituciones.
-        </p>
+        He trabajado con tecnologías tanto del lado del frontend como del backend, tanto en páginas web como en sistemas web y aplicaciones móviles, entre otros. Mi dominio de estas tecnologías me ha permitido crear proyectos ganadores de premios y colaborar con diversas instituciones.        </p>
        </section>
        <section className={styles.skils}>
         <article className={styles.tecnologia}>
