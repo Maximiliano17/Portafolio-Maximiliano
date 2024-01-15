@@ -22,7 +22,7 @@ function Informacion() {
         <br></br>
         ¡Gracias por visitar mi portafolio! Si estás interesado en mi trabajo, no dudes en ponerte en contacto conmigo. Estoy emocionado por las oportunidades que el futuro pueda traer.
             
-         </p>
+         </p> 
         </div>
         <div className={styles.lista}>
          <p>Actividades de interes personal</p>
