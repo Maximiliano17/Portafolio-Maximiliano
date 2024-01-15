@@ -1,6 +1,6 @@
 //Styles
-import styles from "../modules/informacion.module.css"
-
+import styles from "../modules/Informacion.module.css"
+ 
 function Informacion() {
  
   return (
