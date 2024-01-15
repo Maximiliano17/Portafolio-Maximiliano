@@ -5,6 +5,7 @@ import fotoPerfil from "../assets/fotos/fotoPerfil2.png"
 //Componetes
 import SobreMi from "./SobreMi"
 import QuienSoy from "./QuienSoy"
+import Informacion from "./Informacion"
 //import Certificados from "./Certificados"
 
 function Home() {
@@ -49,6 +50,7 @@ function Home() {
            </div>
          </div>
          </section>
+         <Informacion />
          <QuienSoy />
          {/* <Certificados /> */}
          <SobreMi />

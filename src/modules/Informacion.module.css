@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+} 
+
+.informacionContainer{ 
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #1a1a1a;
+}
+
+.info{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+}
+
+.infosobre{
+    width: 40%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: #1a1a1a;
+}  
+
+.infosobre h2{  
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.infosobre h2::after{
+    content: "Soy?";
+    color: #f4c194; 
+    margin-left: 10px;
+}
+
+.infosobre p{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    padding-left: 0px;
+    line-height: 1.5;
+    color: white; 
+   /* background: #343434;*/
+}
+
+.lista{
+    width: 40%;
+    max-width: 500px;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #343434; 
+}
+
+.lista p{
+    width: 90%;
+    height: 10%;
+    padding: 20px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #f4c194;
+    font-size: 20px;
+}
+
+.lista ul{
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start;
+    gap: 1.5rem;
+}
+
+.lista li{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: white;
+}
+
+
+@media(max-width: 1287px){
+    .info{
+        flex-direction: column;
+    }
+
+    .infosobre{
+        width: 100%;
+    }
+
+    .lista{
+        width: 55%;
+        min-width: 300px;
+        height: 400px;
+    }
+
+    .lista p{
+        width: 100%;
+        height: 20%;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .lista ul{
+        width: 100%;
+        padding: 0px;
+    }
+}
