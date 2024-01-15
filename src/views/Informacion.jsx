@@ -4,7 +4,7 @@ import styles from "../modules/informacion.module.css"
 function Informacion() {
  
   return (
-    <>
+    <> 
      <div className={styles.informacionContainer}>
       <section className={styles.info}>
         <div className={styles.infosobre}>
