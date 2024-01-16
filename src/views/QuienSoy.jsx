@@ -22,66 +22,66 @@ function QuienSoy() {
      <div className={styles.container}>
        <section className={styles.quiensoy}>
         {/* <img src={skils} alt="Skils Icon" /> */}
-        <h2 className={styles.text1}> Skils</h2>
+        <h2 className={styles.text1}> Habilidades</h2>
         <p>
-        He trabajado con tecnologías tanto del lado del frontend como del backend, tanto en páginas web como en sistemas web y aplicaciones móviles, entre otros. Mi dominio de estas tecnologías me ha permitido crear proyectos ganadores de premios y colaborar con diversas instituciones.        </p>
+         He trabajado con tecnologías tanto del lado del frontend como del backend, tanto en páginas web como en sistemas web y aplicaciones móviles, entre otros. Mi dominio de estas tecnologías me ha permitido crear proyectos ganadores de premios y colaborar con diversas instituciones.        </p>
+       
        </section>
        <section className={styles.skils}>
-        <article className={styles.tecnologia}>
-          <img src={html} alt="Html" />
-      
-        </article>
-        <article className={styles.tecnologia}>
-        <img src={css} alt="Css" />
-   
-        </article>
-        <article className={styles.tecnologia}>
-        <img className={styles.js} src={js} alt="JavaScript" />
-          
-        </article>
-        <article className={styles.tecnologia}>
-        <img src={react} alt="React" />
-     
-        </article>
-        <article className={styles.tecnologia}>
-        <img src={node} alt="Node" />
- 
-        </article>
-        <article className={styles.tecnologia}>
-        <img src={mysql} alt="Mysql" />
-
-        </article>
-        <article className={styles.tecnologia}>
-        <img src={php} alt="PHP" />
-          
-        </article>
-        <article className={styles.tecnologia}>
-        <img src={kotlin} alt="Kotlin" />
-          
-        </article>
-        <article className={styles.tecnologia}>
-        <img src={git} alt="Git" />
-          
-        </article>
-        <article className={styles.tecnologia}>
-        <img src={typeScript} alt="TypeScript" />
-          
-        </article>
-        <article className={styles.tecnologia}>
-        <img src={mongodb} alt="MongoDB" />
-          
-        </article>
-
-       
-        <article className={styles.tecnologia}>
-        <img src={boos} alt="Boostrap" />
-          
-        </article>
-
-        <article className={styles.tecnologia}>
-        <img src={npm} alt="Npm" />
-          
-        </article>
+        <div className={styles.front}>
+         <p>Front End</p>
+         <div className={styles.tecnologias}>
+          <article className={styles.skil}>
+            <img src={html} alt="Html" />
+          </article>
+          <article className={styles.skil}>
+            <img src={css} alt="css" />
+          </article>
+          <article className={styles.skil}>
+            <img src={js} alt="js" />
+          </article>
+          <article className={styles.skil}>
+            <img src={react} alt="react" />
+          </article>
+          <article className={styles.skil}>
+            <img src={boos} alt="boostrap" />
+          </article>
+          <article className={styles.skil}>
+            <img src={kotlin} alt="kotlin" /> 
+          </article>
+         </div> 
+        </div>
+        <div className={styles.front}>
+         <p>Back End</p>
+         <div className={styles.tecnologias}>
+          <article className={styles.skil}>
+            <img src={php} alt="php" />
+          </article>
+          <article className={styles.skil}>
+            <img src={node} alt="node" />
+          </article>
+          <article className={styles.skil}>
+            <img src={typeScript} alt="typeScript" />
+          </article>
+          <article className={styles.skil}>
+            <img src={npm} alt="npm" />
+          </article>
+         </div> 
+        </div>
+        <div className={styles.front}>
+         <p>Database</p>
+         <div className={styles.tecnologias}>
+          <article className={styles.skil}>
+            <img src={mysql} alt="mysql" />
+          </article>
+          <article className={styles.skil}>
+            <img src={mongodb} alt="mongodb" />
+          </article>
+          <article className={styles.skil}>
+            <img src={git} alt="git" />
+          </article>
+         </div> 
+        </div>
        </section>
      </div>
     </>

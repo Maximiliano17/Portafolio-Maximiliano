@@ -1,11 +1,13 @@
 //Styles
 import styles from "../modules/Home.module.css"
 //Imagenes
-import fotoPerfil from "../assets/fotos/fotoPerfil2.png"
+import fotoPerfil from "../assets/fotos/avatar_perfil.jpeg"
 //Componetes
 import SobreMi from "./SobreMi"
 import QuienSoy from "./QuienSoy"
 import Informacion from "./Informacion"
+import Proyectos from "./Proyectos"
+import Titulo from "./Titulo"
 //import Certificados from "./Certificados"
 
 function Home() {
@@ -51,8 +53,10 @@ function Home() {
          </div>
          </section>
          <Informacion />
+         {/* <Proyectos />*/}
          <QuienSoy />
          {/* <Certificados /> */}
+         <Titulo />
          <SobreMi />
        </div>
       </>

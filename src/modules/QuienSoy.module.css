@@ -8,7 +8,7 @@
 .container{
     width: 100%;
     height: 100vh;
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center; 
     gap: 1rem;   
@@ -24,8 +24,8 @@
     font-size: 50px;
     color: #f4c194;
     font-family: 'Oswald', sans-serif;
-}   
-
+}    
+ 
 .text1::before{
     content: "Mis ";
     color: #ffffff;
@@ -33,13 +33,14 @@
 }
 
 .quiensoy{
-    width: 30%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1rem;
+    padding: 20px;
+    gap: 1rem;   
     color: white;
 }
 
@@ -49,6 +50,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    padding-right: 10px;
 }
 
 .quiensoy img{
@@ -58,46 +60,58 @@
 }
 
 .skils{
-    width: 50%;
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 150px 150px 150px 150px;
-    place-items: center;
-}
-
-.tecnologia{
-    width: 100px;
-    height: 110px;
+    width: 40%;
+    height: 90%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background: #262424;
-    color: white;
-    border-radius: 20px;
-    transition: 500ms;
 }
 
-.tecnologia:hover{
-    background: #0b0b0b;
-    transition: 500ms;
+.front{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 
-.tecnologia img{
-    width: 80px;
-    height: fit-content;
-    object-fit: cover;
+.front p{
+    width: 100%;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.tecnologias{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skil{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.skil img{
+    max-width: 100px; 
+    height: 60px;
 }
 
 @media(max-width: 1287px){
+
  .container{
-    justify-content: center;
+    height: 100vh;
     flex-direction: column;
  }
 
@@ -108,11 +122,10 @@
     justify-content: center;
     align-items: center;
     padding-left: 10px;
-
  }
 
  .skils{
-    width: 100%;
+    width: 80%;
     height: 60%;
  }
 
@@ -139,7 +152,41 @@
     .skils{
         width: 100%;
         height: fit-content;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 150px 150px 150px 150px 150px 150px 150px 150px;
      }
+
+     .tecnologias{
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat (1fr);
+        place-items: center;
+     }
+
+    .skil{
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        
+    .skil img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .front p{
+        display: none;
+    }
+
+    .back p{
+        display: none;
+    }
+
+    .database p{
+        display: none;
+    }
 } 
