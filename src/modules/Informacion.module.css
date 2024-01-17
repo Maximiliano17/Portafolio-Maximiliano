@@ -36,6 +36,7 @@
 
 .infosobre h2{  
     width: 100%;
+    max-width: 500px;
     height: 10vh;
     display: flex;
     justify-content: start;
@@ -53,6 +54,7 @@
 
 .infosobre p{
     width: 100%;
+    max-width: 500px;
     height: fit-content;
     padding: 20px;
     padding-left: 0px;

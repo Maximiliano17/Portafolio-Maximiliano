@@ -8,7 +8,7 @@ import QuienSoy from "./QuienSoy"
 import Informacion from "./Informacion"
 import Proyectos from "./Proyectos"
 import Titulo from "./Titulo"
-//import Certificados from "./Certificados"
+import Contacto from "./Contacto"
 
 function Home() {
  
@@ -58,6 +58,7 @@ function Home() {
          {/* <Certificados /> */}
          <Titulo />
          <SobreMi />
+         <Contacto />
        </div>
       </>
     )

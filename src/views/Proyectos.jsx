@@ -29,7 +29,7 @@ function Proyectos() {
            <a className={styles.linkedin} href="#" target="_blanck">
             Linkedin
            </a>
-           <a className={styles.github} href="#" target="_blanck">
+           <a className={styles.github} href="https://github.com/Maximiliano17/taller" target="_blanck">
             GitHub
            </a>
           </div>
@@ -49,7 +49,7 @@ function Proyectos() {
            <a className={styles.linkedin} href="#" target="_blanck">
             Linkedin
            </a>
-           <a className={styles.github} href="#" target="_blanck">
+           <a className={styles.github} href="https://github.com/Maximiliano17/Centro_De_Estudiantes" target="_blanck">
             GitHub
            </a>
           </div>
@@ -69,7 +69,7 @@ function Proyectos() {
            <a className={styles.linkedin} href="#" target="_blanck">
             Linkedin
            </a>
-           <a className={styles.github} href="#" target="_blanck">
+           <a className={styles.github} href="https://github.com/Maximiliano17/MDM_Electro" target="_blanck">
             GitHub
            </a>
           </div>
