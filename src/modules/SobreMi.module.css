@@ -126,7 +126,6 @@
     transform: translateY(10%);
 }
 
-
 @media(max-width: 1287px){
     .sobreMiContainer{
         flex-direction: column;

@@ -53,7 +53,7 @@ function Home() {
          </div>
          </section>
          <Informacion />
-         {/* <Proyectos />*/}
+         <Proyectos />
          <QuienSoy />
          {/* <Certificados /> */}
          <Titulo />
