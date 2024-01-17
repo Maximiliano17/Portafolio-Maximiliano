@@ -5,18 +5,18 @@ import html from "../assets/iconos/html.png"
 import css from "../assets/iconos/css.png"
 import js from "../assets/iconos/js.png"
 import react from "../assets/iconos/react.png"
-import node from "../assets/iconos/node.png"
+import node from "../assets/iconos/node.jpg"
 import mysql from "../assets/iconos/mysql.png"
 import php from "../assets/iconos/php.png"
 import kotlin from "../assets/iconos/kotlin.png"
 import git from "../assets/iconos/git.png"
 import typeScript from "../assets/iconos/type.png"
-import mongodb from "../assets/iconos/mongodb.png"
+import mongodb from "../assets/iconos/mongo.png"
 import npm from "../assets/iconos/npm.png"
 import boos from "../assets/iconos/boostrap.png"
 
 function QuienSoy() {
- 
+  
   return (
     <> 
      <div className={styles.container}>

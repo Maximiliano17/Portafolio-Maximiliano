@@ -108,6 +108,7 @@
 .skil img{
     max-width: 100px; 
     height: 60px;
+    border-radius: 110px;
 }
 
 @media(max-width: 1287px){
