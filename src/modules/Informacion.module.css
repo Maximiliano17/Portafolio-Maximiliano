@@ -8,6 +8,7 @@
 .informacionContainer{ 
     width: 100%;
     height: fit-content;
+    min-height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +38,7 @@
 .infosobre h2{  
     width: 100%;
     max-width: 500px;
-    height: 10vh;
+    height: 100px;
     display: flex;
     justify-content: start;
     align-items: center;

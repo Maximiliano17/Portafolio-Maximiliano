@@ -8,6 +8,7 @@
 .proyectosContainer{ 
     width: 100%;
     height: fit-content;
+    min-height: 800px;
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -27,7 +28,7 @@
 
 .nav h2{
     width: 80%;
-    height: 10%;
+    height: 100px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -35,7 +36,7 @@
     padding: 20px;
     color: #f4c194;
     font-family: 'Oswald', sans-serif;
-}    
+}     
  
 .nav h2::before{
     content: "Mis ";

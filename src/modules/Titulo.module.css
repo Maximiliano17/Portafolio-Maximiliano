@@ -25,4 +25,8 @@
     .Titulo{
         width: 100%;
     }
+
+    .Titulo h2{
+        font-size: 40px;
+    }
 }
