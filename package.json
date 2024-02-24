@@ -12,6 +12,7 @@
   "dependencies": {
     "clipboard-copy": "^4.0.1",
     "react": "^18.2.0",
+    "react-player": "^2.12.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

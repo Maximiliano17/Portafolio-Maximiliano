@@ -97,7 +97,7 @@
     text-align: start;
     gap: 1.5rem;
 }
-
+ 
 .lista li{
     width: 100%;
     list-style: none;
@@ -133,4 +133,23 @@
         width: 100%;
         padding: 0px;
     }
+}
+
+/* Estilos para la barra de desplazamiento */
+/* WebKit */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color del thumb (la parte desplazable) */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cambia el color del thumb cuando se pasa el ratón sobre él */
 }
