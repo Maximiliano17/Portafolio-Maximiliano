@@ -59,7 +59,7 @@
 .trabajoItem{
     width: 80%;
     max-width: 1000px;
-    height: 700px;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,7 +71,7 @@
 
 .tituloProyects{
     width: 100%;
-    height: 200px; 
+    height: 100px; 
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -84,8 +84,9 @@
 }
 
 .bannerTrabajo{
-    width: 90%;
-    height: 900px;
+    width: 95%;
+    height: 450px;
+    margin-top: 20px;
     display: block;
     justify-content: center;
     align-items: center;
@@ -118,16 +119,39 @@
     align-items: center;
 }
 
+.listProyects{
+    width: 95%;
+    padding-left: 20px;
+}
+
 .tecnologiasPryects span{
     width: fit-content;
     height: fit-content;
     padding: 10px;
+    padding-inline: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100px;
     background: #575757;
     color: white;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.tecnologiasPryects span:hover{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    padding-inline: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: #2d2d2d;
+    color: white;
+    cursor: pointer;
+    transition: 500ms;
 }
 
 .descripcionProyects{
@@ -145,6 +169,10 @@
     text-align: left;
 }
 
+.descripcionProyects li{
+    padding: 10px;
+}
+
 .footerProyects{
     width: 100%;
     height: 50px;
@@ -156,23 +184,28 @@
     border-top: solid 1px grey;
 }
 
-/* Estilos para la barra de desplazamiento */
-/* WebKit */
-::-webkit-scrollbar { 
-    width: 10px;
+/* Estilo para la barra de desplazamiento */
+/* Anchura y color de fondo de la barra */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #e6f7ff; /* Azul claro */
 }
 
+/* Estilo del riel de la barra de desplazamiento */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+    background-color: #e6f7ff; /* Azul claro */
 }
 
+/* Estilo del pulgar de la barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
-    background: #888; /* Color del thumb (la parte desplazable) */
-    border-radius: 5px; /* Borde redondeado */
+    background-color: #99ccff; /* Azul más oscuro */
+    border-radius: 6px; /* Radio de borde del pulgar */
+    border: 3px solid #e6f7ff; /* Borde del pulgar */
 }
 
+/* Estilo del pulgar de la barra de desplazamiento cuando se pasa el ratón sobre él */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Cambia el color del thumb cuando se pasa el ratón sobre él */
+    background-color: #66a3ff; /* Azul más oscuro al pasar el ratón */
 }
 
 
