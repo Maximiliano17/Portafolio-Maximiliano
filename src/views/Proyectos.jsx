@@ -63,7 +63,7 @@ function Proyectos() {
           {/*Trabajos Items*/}
           <article className={styles.trabajoItem}>
           <section className={styles.tituloProyects}>
-             <h1>Centro Estudiantil (Pagina Institucional) 👥📒</h1>
+             <h1>Centro Estudiantil (Página Institucional) 👥📒</h1>
           </section>
           <section className={styles.bannerTrabajo}>
            <img src={centroEstudiantil1} alt="Imagen Proyecto" />

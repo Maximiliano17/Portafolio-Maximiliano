@@ -178,20 +178,28 @@
 
 @media(max-width: 1000px){
 
-    .trabajoItem{
+    .proyectosContainer{
+        padding: 10px;
+    }
+
+    .trabajos{
         width: 100%;
+    }
+
+    .trabajoItem{
+        width: 100%; 
     } 
 
     .tituloProyects{
         height: fit-content;
         margin-top: 15px;
+        margin-bottom: 10px;
     }
 
     .tituloProyects h1{
-        width: 100%;
+        width: 90%;
         color: white;
         text-align: center;
-        font-family: 'Oswald', sans-serif;
     }
 
     .tecnologiasPryects{
