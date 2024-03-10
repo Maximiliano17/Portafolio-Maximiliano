@@ -77,10 +77,43 @@
     align-items: center;
 }
 
-.tituloProyects h1{
+.tituloEffectCod{
     color: white;
-    font-size: 30px;
-    font-family: 'Oswald', sans-serif;
+    margin-right: 7px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tituloEffectCod::after{
+    color: #f4c194;
+    content: " INFORMÁTICA - PROGRAMACIÓN";
+    font-size: 25px;
+}
+
+.tituloEffectPet{
+    color: white;
+    margin-right: 7px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tituloEffectPet::after{
+    color: #f4c194;
+    content: " Red social para dueños de mascotas 🐶🐱";
+    font-size: 25px;
+}
+
+.tituloEffectPañol{
+    color: white;
+    margin-right: 7px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tituloEffectPañol::after{
+    color: #f4c194;
+    content: " System of Stock 📊🖥️";
+    font-size: 25px;
 }
 
 .bannerTrabajo{

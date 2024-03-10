@@ -7,16 +7,7 @@ import imagenProyect2 from "../assets/banners/pañolLogo2.jpeg"
 import imagenProyect3 from "../assets/banners/pañolLogo3.jpeg"
 import imagenProyect4 from "../assets/banners/pañolLogo4.jpeg"
 import imagenProyect5 from "../assets/banners/pañolLogo5.jpeg"
-//CentroEstudiantil
-import centroEstudiantil1 from "../assets/banners/centro1.png"
-import centroEstudiantil2 from "../assets/banners/centro2.png"
-import centroEstudiantil3 from "../assets/banners/centro3.png"
-import centroEstudiantil4 from "../assets/banners/centro4.png"
-//MDM
-import mdm1 from "../assets/banners/mdm1.png"
-import mdm2 from "../assets/banners/mdm2.png" 
-import mdm3 from "../assets/banners/mdm3.png"
-import mdm4 from "../assets/banners/mdm4.png"
+import imagenProyect6 from "../assets/banners/pañolLogo6.png"
 //Cod Blue
 import CB1 from "../assets/banners/loginCB.jpeg"
 import CB2 from "../assets/banners/homeCB.jpeg"
@@ -26,8 +17,13 @@ import CB5 from "../assets/banners/formCB.jpeg"
 import CB6 from "../assets/banners/salasCB.jpeg"
 import CB7 from "../assets/banners/salasintroCB.jpeg"
 import CB8 from "../assets/banners/ingresarSalasCB.jpeg"
+//Pet 
+import pet from "../assets/banners/petzify.png"
+import pet2 from "../assets/banners/petzify1.png"
+import pet3 from "../assets/banners/petzify2.png"
+import pet4 from "../assets/banners/petzify3.png"
 
-function Proyectos() { 
+function Proyectos() {  
   
   return (  
     <>  
@@ -49,7 +45,7 @@ function Proyectos() {
            <img src={CB8} alt="Imagen Proyecto" />
           </section>
           <section className={styles.tituloProyects}>
-             <h1>OLIMPÍADA NACIONAL DE ETP 2023 INFORMÁTICA - PROGRAMACIÓN</h1>
+           <h1 className={styles.tituloEffectCod}>OLIMPÍADA NACIONAL DE ETP 2023</h1>
           </section>
           <section className={styles.infoProyects}>
             <div className={styles.tecnologiasPryects}>
@@ -78,17 +74,53 @@ function Proyectos() {
             </footer>
           </section>
         </article>
+         {/*Trabajos Items*/}
+         <article className={styles.trabajoItem}>
+          <section className={styles.bannerTrabajo}>
+           <img src={pet} alt="Imagen Proyecto" />
+           <img src={pet2} alt="Imagen Proyecto" />
+           <img src={pet3} alt="Imagen Proyecto" />
+           <img src={pet4} alt="Imagen Proyecto" />
+          </section>
+          <section className={styles.tituloProyects}>
+             <h1 className={styles.tituloEffectPet}>Petzify App</h1>
+          </section>
+          <section className={styles.infoProyects}>
+            <div className={styles.tecnologiasPryects}>
+              <span>React Native</span>
+              <span>FireBase</span>
+              <span>Mongoose</span>
+              <span>Aws</span>
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>MongoDB</span>
+            </div>
+            <div className={styles.descripcionProyects}>
+            <p>
+              Petzify es una red social especializada en animales domésticos que proporciona a los dueños de mascotas un entorno dedicado a compartir sus experiencias con sus compañeros peludos. Además, permitiremos a los usuarios publicar sobre animales disponibles para adopción y solicitar donaciones para facturas médicas de sus mascotas.<br></br> <br></br> 
+              Nuestro objetivo principal es contribuir a reducir la cantidad de animales perdidos en Argentina. Para lograrlo, ofrecemos metodologías de reporte para mascotas extraviadas, permitiendo a los usuarios indicar la última ubicación conocida y adjuntar los datos correspondientes.<br></br> <br></br> 
+              Estos informes serán visibles en un mapa para que todos los usuarios puedan ayudar a localizar a las mascotas reportadas. Para identificar a las mascotas, utilizamos inteligencia artificial que reconoce el rostro de cada animal.<br></br> <br></br> 
+              Esta tecnología emplea la cámara de dispositivos móviles y busca coincidencias en una base de datos diseñada específicamente para este propósito. La detección se basa en patrones faciales, con especial atención en las características de la nariz. Nuestro sistema utiliza una red neuronal compleja y estimulada, programada en Python y vinculada a la aplicación mediante la biblioteca Tensor Flow. Además, Petzify cuenta con una sección de petshop, donde empresas y negocios pueden mostrar sus productos a los usuarios a través de un sistema de comercio electrónico.<br></br><br></br> 
+              Nos esforzamos por brindar a los dueños de mascotas una plataforma integral que fomente la interacción, la ayuda mutua y el bienestar de los animales domésticos.<br></br> 
+            </p>
+            </div> 
+            <footer className={styles.footerProyects}>
+              mayo 2023 - Diciembre 2023
+            </footer>
+          </section>
+        </article>
         {/*Trabajos Items*/}
         <article className={styles.trabajoItem}>
           <section className={styles.bannerTrabajo}>
            <img src={imagenProyect1} alt="Imagen Proyecto" />
+           <img src={imagenProyect6} alt="Imagen Proyecto" />
            <img src={imagenProyect2} alt="Imagen Proyecto" />
            <img src={imagenProyect3} alt="Imagen Proyecto" />
            <img src={imagenProyect4} alt="Imagen Proyecto" />
            <img src={imagenProyect5} alt="Imagen Proyecto" />
           </section>
           <section className={styles.tituloProyects}>
-             <h1>Pañol (System of Stock) 📊🖥️</h1>
+             <h1 className={styles.tituloEffectPañol}>Pañol</h1>
           </section>
           <section className={styles.infoProyects}>
             <div className={styles.tecnologiasPryects}>
