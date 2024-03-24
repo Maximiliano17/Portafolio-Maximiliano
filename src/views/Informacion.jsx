@@ -24,7 +24,7 @@ function Informacion() {
             
          </p> 
         </div>
-        <div className={styles.lista}>
+        <div className={styles.lista}> 
          <p>Actividades de interes personal</p>
          <ul>
             <li> 🏋🏻‍♂️  Apacionado del entrenamiento</li>
