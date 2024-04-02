@@ -1,0 +1,41 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.contactoContainier{
+    width: 50%;
+    height: fit-content;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.emailArticle{
+    width: 55%;
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #FF0000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.emailArticle a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.emailArticle button{
+    width: fit-content;
+    height: fit-content;
+    font-size: 20px;
+    padding: 20px;
+    background: wheat;
+    border-style: none;
+    cursor: pointer;
+}

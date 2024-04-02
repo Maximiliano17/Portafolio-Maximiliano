@@ -32,24 +32,23 @@ function Home() {
               GitHub
             </a>
 
-           <a className={styles.buttonn} href="../../public/CV Maximilinao Dos Santos Android Developer.pdf" download="CV Maximilinao Dos Santos Desarrollador Web.pdf">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-              <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-              <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+           <a className={styles.buttonn} href="mailto:contact.maxidossantosburgos@gmail.com" target="_blanck">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
             </svg>
+            Gmail
             </a>
 
            {/* Res */}
             <a className={styles.linkedinRes} href="https://www.linkedin.com/in/maximilianodossantos/" target="_blanck">In</a>
             <a className={styles.githubRes} href="https://github.com/Maximiliano17" target="_blanck">git</a>
-            <a className={styles.buttonnRes} href="../../public/CV Maximilinao Dos Santos Desarrollador Web.pdf" download="CV Maximilinao Dos Santos Desarrollador Web.pdf">
-             Cv
-            </a>
+            <a className={styles.buttonnRes} href="mailto:contact.maxidossantosburgos@gmail.com" target="_blanck">Mail</a>
            </div>
          </div>
          </section>
          <Informacion />
          <Proyectos />
+        {/* <Contacto /> */}
        </div>
       </>
     )

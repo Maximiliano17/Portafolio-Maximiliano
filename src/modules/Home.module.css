@@ -99,15 +99,6 @@
    /* box-shadow:  0px 0px 3px 0px black;*/
 }
 
-.linkedin:hover{
-  transition: 500ms;
-  background: #1a1a1a;
-  color: #0077B5;
-  font-size: 25px;
-  border-bottom:solid 1px #0077B5;
-  box-shadow: 0px 0px 5px 0px #0077B5;
-}
-
 .github{
     width: 150px;
     height: 40px;
@@ -124,24 +115,19 @@
     box-shadow:  0px 0px 3px 0px white;
 }
 
-.github:hover{
-  transition: 500ms;
-  background: white;
-  color: #1a1a1a;
-  font-size: 25px;
-  border-bottom:solid 1px white;
-  box-shadow: 0px 0px 5px 0px white;
-}
-
 .buttonn{
-  width: 40px;
+  width: 150px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1a1a1a;
-  border-style: none;
-  color: white;
+  gap: .5rem;
+  background: red;
+  color: #FFFFFF;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 500ms;
 }
 
 .linkedinRes{
@@ -212,15 +198,17 @@
   } 
 
   .buttonnRes{
-    width: 70px;
-    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgb(196, 65, 65);
     border:solid 1px rgb(196, 65, 65);
     color: white;
-    text-decoration: none;  
+    font-size: 25px;
+    text-decoration: none; 
+    width: 100px;  
+    height: 50px; 
+    border-radius: 10px;
   }
 
 }
