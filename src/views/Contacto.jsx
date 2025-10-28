@@ -58,28 +58,7 @@ function Contacto() {
         "Desarrollé una modal interactiva para visualizar archivos adjuntos en casos abiertos, facilitando el acceso a documentos legales.",
       ],
     },
-/*    {
-      logo: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Logo_Unity_2021.svg",
-      empresa: "FusionPax",
-      pais: "España",
-      bandera: "https://flagcdn.com/es.svg",
-      tiempo: "2021 - 2022",
-      modalidad: "Remoto",
-      rol: "Fullstack Developer",
-      descripcion:
-        "Desarrollo de aplicaciones de reservas y pagos en línea. Implementación de sistemas de autenticación y paneles administrativos con Angular y Express.",
-    },
-    {
-      logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-      empresa: "Gestión Fácil",
-      pais: "Argentina",
-      bandera: "https://flagcdn.com/ar.svg",
-      tiempo: "2020 - 2021",
-      modalidad: "Remoto",
-      rol: "Software Consultant",
-      descripcion:
-        "Creación de sistemas personalizados de gestión para pymes. Automatización de procesos internos y modernización de sistemas legados.",
-    }, */
+
   ];
 
   return (
