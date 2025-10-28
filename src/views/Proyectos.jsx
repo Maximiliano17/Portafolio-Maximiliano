@@ -29,7 +29,7 @@ function Proyectos() {
     <>  
      <div className={styles.proyectosContainer}>
        <nav className={styles.nav}>
-        <h2>Trabajos</h2>
+        <h2>Proyectos</h2>
        </nav>
        <div className={styles.trabajos}>
           {/*Trabajos Items*/}

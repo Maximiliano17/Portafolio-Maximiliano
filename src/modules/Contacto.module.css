@@ -1,41 +1,247 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+/* General */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.contactoContainier{
-    width: 50%;
-    height: fit-content;
-    min-height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
-
-.emailArticle{
-    width: 55%;
-    height: 45px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #FF0000;
-    border-radius: 10px;
-    cursor: pointer;
+.proyectosContainer {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #171515;
+  color: #fff;
 }
 
-.emailArticle a{
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.emailArticle button{
-    width: fit-content;
-    height: fit-content;
-    font-size: 20px;
+.nav h2 {
+  font-size: 50px;
+  color: #f4c194;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+}
+
+.nav h2::before {
+  content: "Mi ";
+  color: #ffffff;
+  margin-right: 7px;
+}
+
+/* Cards container */
+.trabajos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Card base */
+.card {
+  width: 45%;
+  background: #1e1c1c;
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 0.8s ease forwards;
+  height: auto; /* Crece según el contenido */
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(244,193,148,0.5);
+}
+
+/* Card header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #222;
+  padding: 5px;
+}
+
+.header h3 {
+  font-size: 24px;
+  color: #f4c194;
+  flex-grow: 1;
+}
+
+.flagContainer {
+  position: relative;
+}
+
+.flag {
+  width: 28px;
+  height: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.flag:hover {
+  transform: scale(1.1);
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.flagContainer:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Info básica */
+.info p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #ddd;
+}
+
+/* Descripción y resumen */
+.descripcion,
+.resumen {
+  margin-top: 12px;
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Stack & herramientas */
+.stack {
+  margin-top: 15px;
+}
+
+.stack strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #f4c194;
+}
+
+.stack ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none; /* <-- sin puntos */
+  padding-left: 0;
+}
+
+.stack li {
+  background: #2c2a2a;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #ddd;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.stack li:hover {
+  background: #f4c194;
+  color: #1e1c1c;
+}
+
+/* Logros */
+.logros {
+  margin-top: 15px;
+}
+
+.logros strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #f4c194;
+}
+
+.logros ul {
+  list-style: none; /* <-- sin puntos */
+  margin-left: 0;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+.logros li {
+  margin-bottom: 5px;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav h2 {
+    font-size: 36px;
+  }
+
+  .card {
+    width: 100%;
     padding: 20px;
-    background: wheat;
-    border-style: none;
-    cursor: pointer;
+  }
+
+  .header h3 {
+    font-size: 20px;
+  }
+
+  .descripcion,
+  .resumen {
+    font-size: 14px;
+  }
+
+  .stack li {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
 }

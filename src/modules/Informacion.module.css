@@ -48,7 +48,7 @@
 }
 
 .infosobre h2::after{
-    content: "Soy?";
+    content: "presentación";
     color: #f4c194; 
     margin-left: 10px;
 }
