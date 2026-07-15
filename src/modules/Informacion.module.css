@@ -1,156 +1,136 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-} 
-
-.informacionContainer{ 
-    width: 100%;
-    height: fit-content;
-    min-height: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.informacionContainer {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 90px 24px;
+  scroll-margin-top: 80px;
 }
 
-.info{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 20px;
+/* Section header (shared pattern) */
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  margin-bottom: 48px;
 }
 
-.infosobre{
-    width: 40%;
-    height: fit-content;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    background: #1a1a1a;
-}  
-
-.infosobre h2{  
-    width: 100%;
-    max-width: 500px;
-    height: 100px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    color: white;
-    font-size: 50px;
-    font-family: 'Oswald', sans-serif;
+.eyebrow {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-2);
 }
 
-.infosobre h2::after{
-    content: "presentación";
-    color: #f4c194; 
-    margin-left: 10px;
+.title {
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  font-weight: 700;
+  color: var(--text);
 }
 
-.infosobre p{
-    width: 100%;
-    max-width: 500px;
-    height: fit-content;
-    padding: 20px;
-    padding-left: 0px;
-    line-height: 1.5;
-    color: white; 
+.info {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 28px;
+  align-items: start;
 }
 
-.lista{
-    width: 40%;
-    max-width: 500px;
-    height: fit-content;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    align-self: flex-start;
-    background: #343434; 
+.infosobre {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 36px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
 }
 
-.lista p{
-    width: 90%;
-    height: 10%;
-    padding: 20px;
-    padding-left: 0px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    color: #f4c194;
-    font-size: 20px;
+.infosobre p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 1rem;
 }
 
-.lista ul{
-    width: 90%;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: start;
-    gap: 1.5rem;
-}
- 
-.lista li{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    color: white;
+.infosobre .firma {
+  margin-top: 6px;
+  color: var(--text);
 }
 
-
-@media(max-width: 1287px){
-    .info{
-        flex-direction: column;
-    }
-
-    .infosobre{
-        width: 100%;
-    }
-
-    .lista{
-        width: 55%;
-        min-width: 310px;
-        height: 400px;
-    }
-
-    .lista p{
-        width: 100%;
-        height: 20%;
-        padding: 5px;
-    }
-
-    .lista ul{
-        width: 100%;
-        padding: 0px;
-    }
+.infosobre .firma strong {
+  color: var(--accent-2);
+  font-family: var(--font-head);
 }
 
-/* Estilos para la barra de desplazamiento */
-/* WebKit */
-::-webkit-scrollbar {
-    width: 10px;
+/* Interests card */
+.lista {
+  position: sticky;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 32px;
+  background: linear-gradient(160deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
 }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+.listaTitle {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text);
 }
 
-::-webkit-scrollbar-thumb {
-    background: #888; /* Color del thumb (la parte desplazable) */
-    border-radius: 5px; /* Borde redondeado */
+.lista ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Cambia el color del thumb cuando se pasa el ratón sobre él */
+.lista li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.lista li:hover {
+  background: var(--accent-soft);
+  color: var(--text);
+  transform: translateX(4px);
+}
+
+.emoji {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+@media (max-width: 860px) {
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .lista {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .informacionContainer {
+    padding: 70px 18px;
+  }
+
+  .infosobre {
+    padding: 26px;
+  }
 }

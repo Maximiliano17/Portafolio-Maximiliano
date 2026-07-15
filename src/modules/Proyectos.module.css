@@ -1,291 +1,244 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-} 
-
-.proyectosContainer{ 
-    width: 100%;
-    height: fit-content;
-    min-height: 800px;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;  
-    background: #171515;
-} 
-
-.nav{ 
-    width: 100%;
-    height: 20vh;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.proyectosContainer {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 90px 24px;
+  scroll-margin-top: 80px;
 }
 
-.nav h2{
-    width: 80%;
-    height: 100px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    font-size: 50px;
-    padding: 20px;
-    color: #f4c194;
-    font-family: 'Oswald', sans-serif;
-}     
- 
-.nav h2::before{
-    content: "Mis ";
-    color: #ffffff;
-    margin-right: 7px;
+/* Section header */
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  margin-bottom: 48px;
 }
 
-.trabajos{ 
-    width: 100%;
-    height: fit-content;
-    min-height: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
-    gap: 2rem;
+.eyebrow {
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-2);
 }
 
-.trabajoItem{
-    width: 80%;
-    max-width: 1000px;
-    height: fit-content;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 20px;
-    background: #343434;
-    box-shadow: 0px 0px 10px 0px black;
+.title {
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  font-weight: 700;
+  color: var(--text);
 }
 
-.tituloProyects{
-    width: 100%;
-    height: 100px; 
-    display: flex; 
-    justify-content: center;
-    align-items: center;
+/* Projects list */
+.trabajos {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
 }
 
-.tituloEffectCod{
-    color: white;
-    margin-right: 7px;
-    font-size: 25px;
-    font-family: 'Roboto', sans-serif;
+.trabajoItem {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-.tituloEffectCod::after{
-    color: #f4c194;
-    content: " INFORMÁTICA - PROGRAMACIÓN";
-    font-size: 25px;
+.trabajoItem:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lg);
 }
 
-.tituloEffectPet{
-    color: white;
-    margin-right: 7px;
-    font-size: 25px;
-    font-family: 'Roboto', sans-serif;
+/* Banner (scrollable gallery) */
+.bannerTrabajo {
+  width: 100%;
+  max-height: 340px;
+  overflow-y: auto;
+  background: var(--bg-2);
+  scrollbar-width: thin;
 }
 
-.tituloEffectPet::after{
-    color: #f4c194;
-    content: " Red social para dueños de mascotas 🐶🐱";
-    font-size: 25px;
+.bannerTrabajo img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
-.tituloEffectPañol{
-    color: white;
-    margin-right: 7px;
-    font-size: 25px;
-    font-family: 'Roboto', sans-serif;
+/* Embedded YouTube video */
+.videoWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-bottom: 1px solid var(--border);
 }
 
-.tituloEffectPañol::after{
-    color: #f4c194;
-    content: " System of Stock 📊🖥️";
-    font-size: 25px;
+.player {
+  position: absolute;
+  inset: 0;
 }
 
-.bannerTrabajo{
-    width: 95%;
-    height: 450px;
-    margin-top: 20px;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow-y: scroll;
+/* Content column */
+.tituloProyects {
+  padding: 24px 24px 0;
 }
 
-.bannerTrabajo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: solid 2px grey;
+.tituloEffectCod,
+.tituloEffectPet,
+.tituloEffectPañol {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
 }
 
-.infoProyects{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
+.tituloEffectCod::after {
+  content: " · Informática & Programación";
+  color: var(--accent-2);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: block;
+  margin-top: 4px;
 }
 
-.tecnologiasPryects{
-    width: 95%;
-    height: 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.tituloEffectPet::after {
+  content: " · Red social para dueños de mascotas 🐶🐱";
+  color: var(--accent-2);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: block;
+  margin-top: 4px;
 }
 
-.listProyects{
-    width: 95%;
-    padding-left: 20px;
+.tituloEffectPañol::after {
+  content: " · System of Stock 📊🖥️";
+  color: var(--accent-2);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: block;
+  margin-top: 4px;
 }
 
-.tecnologiasPryects span{
-    width: fit-content;
-    height: fit-content;
-    padding: 10px;
-    padding-inline: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    background: #575757;
-    color: white;
-    cursor: pointer;
-    transition: 500ms;
+.infoProyects {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px 24px;
+  gap: 14px;
 }
 
-.tecnologiasPryects span:hover{
-    width: fit-content;
-    height: fit-content;
-    padding: 10px;
-    padding-inline: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    background: #2d2d2d;
-    color: white;
-    cursor: pointer;
-    transition: 500ms;
+.tecnologiasPryects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
 }
 
-.descripcionProyects{
-    width: 95%;
-    height: fit-content;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
+.tecnologiasPryects span {
+  padding: 4px 11px;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: default;
+  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-.descripcionProyects p{
-    line-height: 1.5;
-    color: white;
-    text-align: left;
+.tecnologiasPryects span:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
-.descripcionProyects li{
-    padding: 10px;
+.descripcionProyects {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.footerProyects{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    color: white;
-    border-top: solid 1px grey;
+.descripcionProyects p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.9rem;
+  text-align: left;
 }
 
-/* Estilo para la barra de desplazamiento */
-/* Anchura y color de fondo de la barra */
-::-webkit-scrollbar {
-    width: 12px;
-    background-color: #e6f7ff; /* Azul claro */
+/* Feature / tech bullet lists */
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  padding-left: 0;
 }
 
-/* Estilo del riel de la barra de desplazamiento */
-::-webkit-scrollbar-track {
-    background-color: #e6f7ff; /* Azul claro */
+.featureList li {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
 }
 
-/* Estilo del pulgar de la barra de desplazamiento */
-::-webkit-scrollbar-thumb {
-    background-color: #99ccff; /* Azul más oscuro */
-    border-radius: 6px; /* Radio de borde del pulgar */
-    border: 3px solid #e6f7ff; /* Borde del pulgar */
+.featureList strong {
+  color: var(--text);
 }
 
-/* Estilo del pulgar de la barra de desplazamiento cuando se pasa el ratón sobre él */
-::-webkit-scrollbar-thumb:hover {
-    background-color: #66a3ff; /* Azul más oscuro al pasar el ratón */
+.techTitle {
+  font-family: var(--font-head);
+  font-weight: 600;
+  color: var(--text) !important;
+  font-size: 0.95rem !important;
 }
 
+.listProyects {
+  padding-left: 20px;
+  margin: 10px 0;
+}
 
-@media(max-width: 1000px){
+.descripcionProyects li {
+  padding: 2px 0;
+  color: var(--text-muted);
+}
 
-    .proyectosContainer{
-        padding: 10px;
-    }
+.descripcionProyects strong {
+  color: var(--text);
+}
 
-    .trabajos{
-        width: 100%;
-    }
+.footerProyects {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 14px;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--border);
+}
 
-    .trabajoItem{
-        width: 100%; 
-    } 
+/* Responsive */
+@media (max-width: 900px) {
+  .bannerTrabajo {
+    max-height: 280px;
+  }
+}
 
-    .tituloProyects{
-        height: fit-content;
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
+@media (max-width: 480px) {
+  .proyectosContainer {
+    padding: 70px 18px;
+  }
 
-    .tituloProyects h1{
-        width: 90%;
-        color: white;
-        text-align: center;
-    }
+  .tituloProyects {
+    padding: 24px 22px 0;
+  }
 
-    .tecnologiasPryects{
-        display: none;
-    }
-
-    .bannerTrabajo{
-        max-height: 220px;
-    }
-    
-    .tecnologiasPryects span{
-        width: 50px;
-        height: fit-content;
-        padding: 10px;
-        font-size: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 100px;
-        background: #575757;
-        color: white;
-    }
+  .infoProyects {
+    padding: 16px 22px 24px;
+  }
 }

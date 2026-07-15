@@ -1,49 +1,36 @@
 //Styles
 import styles from "../modules/Proyectos.module.css";
-//Imagenes
-//Pañol
+//Video
+import ReactPlayer from "react-player/youtube";
+//Imagenes - Pañol
 import imagenProyect1 from "../assets/banners/pañolLogo.jpeg"
 import imagenProyect2 from "../assets/banners/pañolLogo2.jpeg"
 import imagenProyect3 from "../assets/banners/pañolLogo3.jpeg"
 import imagenProyect4 from "../assets/banners/pañolLogo4.jpeg"
 import imagenProyect5 from "../assets/banners/pañolLogo5.jpeg"
 import imagenProyect6 from "../assets/banners/pañolLogo6.png"
-//Cod Blue
-import CB1 from "../assets/banners/loginCB.jpeg"
-import CB2 from "../assets/banners/homeCB.jpeg"
-import CB3 from "../assets/banners/opCB.jpeg"
-import CB4 from "../assets/banners/ingresarCB.jpeg"
-import CB5 from "../assets/banners/formCB.jpeg"
-import CB6 from "../assets/banners/salasCB.jpeg"
-import CB7 from "../assets/banners/salasintroCB.jpeg"
-import CB8 from "../assets/banners/ingresarSalasCB.jpeg"
-//Pet 
-import pet from "../assets/banners/petzify.png"
-import pet2 from "../assets/banners/petzify1.png"
-import pet3 from "../assets/banners/petzify2.png"
-import pet4 from "../assets/banners/petzify3.png"
 
 function Proyectos() {  
   
   return (  
     <>  
-     <div className={styles.proyectosContainer}>
-       <nav className={styles.nav}>
-        <h2>Proyectos</h2>
-       </nav>
+     <section id="proyectos" className={styles.proyectosContainer}>
+       <div className={styles.head}>
+        <span className={styles.eyebrow}>Portfolio</span>
+        <h2 className={styles.title}>Proyectos destacados</h2>
+       </div>
        <div className={styles.trabajos}>
           {/*Trabajos Items*/}
           <article className={styles.trabajoItem}>
-          <section className={styles.bannerTrabajo}>
-           <img src={CB1} alt="Imagen Proyecto" />
-           <img src={CB2} alt="Imagen Proyecto" />
-           <img src={CB3} alt="Imagen Proyecto" />
-           <img src={CB4} alt="Imagen Proyecto" />
-           <img src={CB5} alt="Imagen Proyecto" />
-           <img src={CB6} alt="Imagen Proyecto" />
-           <img src={CB7} alt="Imagen Proyecto" />
-           <img src={CB8} alt="Imagen Proyecto" />
-          </section>
+          <div className={styles.videoWrap}>
+            <ReactPlayer
+              className={styles.player}
+              url="https://www.youtube.com/watch?v=nyaAW60Vbw8"
+              width="100%"
+              height="100%"
+              controls
+            />
+          </div>
           <section className={styles.tituloProyects}>
            <h1 className={styles.tituloEffectCod}>OLIMPÍADA NACIONAL DE ETP 2023</h1>
           </section>
@@ -57,17 +44,25 @@ function Proyectos() {
               <span>Web Sockets</span>
             </div>
             <div className={styles.descripcionProyects}>
-            <p>
-              Nuestra tarea consiste en crear una solución digital para el protocolo médico conocido como "Código Azul", que se caracteriza por activar dos alarmas que requieren la presencia de personal médico. Esta solución debe permitir el acceso mediante un sistema de autenticación basado en usuario y contraseña, ofreciendo una serie de funcionalidades clave:
-              <ol className={styles.listProyects}><br></br>
-              <li><strong>Crear áreas médicas:</strong> La aplicación debe permitir la creación de áreas médicas, lo que implica configurar espacios específicos para el manejo de situaciones médicas críticas.</li>
-              <li><strong>Asignar personal:</strong> Debe ser posible asignar y gestionar el personal médico a las áreas correspondientes, asegurando una adecuada distribución de recursos humanos.</li>
-              <li><strong>Asignar pacientes:</strong> La solución debe facilitar la asignación de pacientes a las áreas médicas, garantizando una atención eficiente y oportuna.</li>
-              <li><strong>Prender alarmas:</strong> En cada área médica, se debe tener la capacidad de activar alarmas para alertar sobre situaciones médicas críticas en curso, lo que requerirá una interfaz intuitiva y efectiva.</li>
-              </ol>
-              <br></br>
-              Este proyecto se ha planteado con un plazo de ejecución de una semana, lo que exige una selección cuidadosa de tecnologías y estrategias de desarrollo para cumplir con los requisitos y expectativas del protocolo "Código Azul". A continuación, se detallarán los criterios técnicos y las consideraciones que hemos tenido en cuenta para llevar a cabo esta implementación.
+              <p>
+                Nuestro objetivo es desarrollar una solución digital para el protocolo médico "Código Azul", que se basa en activar dos alarmas para requerir la presencia de personal médico. La solución debe incluir un sistema de autenticación con usuario y contraseña, y ofrecer las siguientes funcionalidades clave:
               </p>
+              <ul className={styles.featureList}>
+                <li><strong>🔹 Crear Áreas Médicas:</strong> Configura espacios específicos para el manejo de situaciones críticas en el entorno médico.</li>
+                <li><strong>🔹 Asignar Personal:</strong> Gestiona la distribución del personal médico a las áreas correspondientes, asegurando una adecuada asignación de recursos humanos.</li>
+                <li><strong>🔹 Asignar Pacientes:</strong> Facilita la asignación de pacientes a las áreas médicas, garantizando una atención eficiente y oportuna.</li>
+                <li><strong>🔹 Activar Alarmas:</strong> Permite activar alarmas en cada área médica para alertar sobre situaciones críticas, utilizando una interfaz intuitiva y efectiva.</li>
+              </ul>
+              <p>
+                Este proyecto tiene un plazo de ejecución de una semana, por lo que es fundamental seleccionar cuidadosamente las tecnologías y estrategias de desarrollo para cumplir con los requisitos y expectativas del protocolo "Código Azul".
+              </p>
+              <p className={styles.techTitle}>🔧 Tecnologías Utilizadas:</p>
+              <ul className={styles.featureList}>
+                <li><strong>Front-end:</strong> React con CSS a mano.</li>
+                <li><strong>Back-end:</strong> Node.js con Express.</li>
+                <li><strong>Base de Datos:</strong> MongoDB.</li>
+                <li><strong>Actualización en Tiempo Real:</strong> Web Sockets.</li>
+              </ul>
             </div> 
             <footer className={styles.footerProyects}>
               Septiembre 2023  - Septiembre 2023 
@@ -76,12 +71,15 @@ function Proyectos() {
         </article>
          {/*Trabajos Items*/}
          <article className={styles.trabajoItem}>
-          <section className={styles.bannerTrabajo}>
-           <img src={pet} alt="Imagen Proyecto" />
-           <img src={pet2} alt="Imagen Proyecto" />
-           <img src={pet3} alt="Imagen Proyecto" />
-           <img src={pet4} alt="Imagen Proyecto" />
-          </section>
+          <div className={styles.videoWrap}>
+            <ReactPlayer
+              className={styles.player}
+              url="https://youtu.be/sd4FjQaW0-4"
+              width="100%"
+              height="100%"
+              controls
+            />
+          </div>
           <section className={styles.tituloProyects}>
              <h1 className={styles.tituloEffectPet}>Petzify App</h1>
           </section>
@@ -151,7 +149,7 @@ function Proyectos() {
           </section>
         </article>
        </div>
-     </div>
+     </section>
     </> 
   ) 
 }

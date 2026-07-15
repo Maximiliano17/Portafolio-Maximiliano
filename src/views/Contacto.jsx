@@ -62,17 +62,21 @@ function Contacto() {
   ];
 
   return (
-    <div className={styles.proyectosContainer}>
-      <nav className={styles.nav}>
-        <h2>Experiencia</h2>
-      </nav>
+    <section id="experiencia" className={styles.proyectosContainer}>
+      <div className={styles.head}>
+        <span className={styles.eyebrow}>Trayectoria</span>
+        <h2 className={styles.title}>Experiencia profesional</h2>
+      </div>
 
       <div className={styles.trabajos}>
         {experiencias.map((exp, index) => (
           <div key={index} className={styles.card}>
             <div className={styles.header}>
               <img src={exp.logo} alt="logo" className={styles.logo} />
-              <h3>{exp.empresa}</h3>
+              <div className={styles.headerText}>
+                <h3>{exp.empresa}</h3>
+                <span className={styles.rolTag}>{exp.rol}</span>
+              </div>
               <div className={styles.flagContainer}>
                 <img src={exp.bandera} alt={exp.pais} className={styles.flag} />
                 <span className={styles.tooltip}>{exp.pais}</span>
@@ -80,15 +84,8 @@ function Contacto() {
             </div>
 
             <div className={styles.info}>
-              <p>
-                <strong>Rol:</strong> {exp.rol}
-              </p>
-              <p>
-                <strong>Modalidad:</strong> {exp.modalidad}
-              </p>
-              <p>
-                <strong>Tiempo:</strong> {exp.tiempo}
-              </p>
+              <span className={styles.meta}>{exp.modalidad}</span>
+              <span className={styles.meta}>{exp.tiempo}</span>
             </div>
 
             {/* Descripción corta */}
@@ -141,7 +138,7 @@ function Contacto() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
