@@ -31,11 +31,9 @@ function Home() {
               </p>
 
               <p className={styles.descripcion}>
-                Desarrollador web full stack y de aplicaciones móviles. Siempre busco
-                mejorar mis capacidades técnicas y de trabajo en equipo. Apasionado de
-                las nuevas oportunidades, disfruto tanto del trabajo independiente como
-                colaborativo, adaptándome a las necesidades de cada proyecto.
-              </p>
+<strong> +2 años de experiencia </strong>         
+
+ Especializado en construir aplicaciones web eficientes, sistemas interactivos en tiempo real y arquitectura reutilizable. Con experiencia en startups y entornos ágiles, he liderado módulos clave para plataformas turísticas y legales, enfocándome en código limpio, optimización de flujos y entregables de alto impacto para el negocio.              </p>
 
               <div className={styles.redes}>
                 <a className={styles.primary} href="mailto:contact.maxidossantosburgos@gmail.com">
@@ -62,15 +60,8 @@ function Home() {
 
               <div className={styles.stack}>
                 {stack.map((tech) => (
-                  <span key={tech}>{tech}</span>
+                  <span key={tech}>{tech}</span> 
                 ))}
-              </div>
-            </div>
-
-            <div className={styles.fotografia}>
-              <div className={styles.photoGlow} />
-              <div className={styles.photoFrame}>
-                <img src={fotoPerfil} alt="Maximiliano Dos Santos" />
               </div>
             </div>
           </div>

@@ -39,7 +39,7 @@ function Contacto() {
       empresa: "LegalRun",
       pais: "Argentina",
       bandera: "https://flagcdn.com/ar.svg",
-      tiempo: "Ago 2024 - Oct 2025 • 3 meses",
+      tiempo: "Ago 2024 - Oct 2024 • 3 meses",
       modalidad: "Remoto",
       rol: "Full Stack Developer",
       resumen:

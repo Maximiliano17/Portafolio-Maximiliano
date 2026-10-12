@@ -16,16 +16,18 @@
 .hero {
   width: 100%;
   max-width: var(--maxw);
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 64px;
+ 
 }
 
 .intro {
+  width: 100%;
+  
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 22px;
   animation: fadeUp 0.9s ease-out both;
 }
@@ -79,6 +81,7 @@
   color: var(--text-muted);
   font-size: 1.02rem;
   line-height: 1.75;
+  text-align: center;
 }
 
 .redes {
