@@ -57,14 +57,7 @@ function ServiciosExtra() {
       descripcion: "Sitio web informativo para emprendimiento propio HelpDev.",
       liveUrl: "https://google.com"
     },
-    {
-      titulo: "E-Commerce ropa local",
-      categoria: "Landing Page",
-      videoSrc: videoZapatillas,
-      videoMobileSrc: videoZapatillas, // Reemplazar por video vertical Reel
-      descripcion: "Sitio web para tienda local de venta de ropa.",
-      liveUrl: "https://google.com"
-    }
+   
   ];
 
   return (
