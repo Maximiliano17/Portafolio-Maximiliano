@@ -14,7 +14,13 @@ function ServiciosExtra() {
     categoria: "SaaS / Suscripción",
     videoUrl: videoSass,
     descripcion: "Sistema de gestión comercial y seguimiento de clientes desarrollado para kioscos y comercios. Incluye panel de control multiusuario, métricas en tiempo real y flujo de ventas automatizado.",
-    demoUrl: "https://www.linkedin.com/in/maximiliano-dos-santos" // URL de LinkedIn
+    demoUrl: "https://www.linkedin.com/in/maximilianodossantos/",
+    tecnologias: {
+      frontend: "HTML5, CSS3, JavaScript",
+      backend: "Node.js / Express",
+      api: "WhatsApp API",
+      database: "Supabase DB"
+    }
   };
 
   const webProjects = [
@@ -55,40 +61,63 @@ function ServiciosExtra() {
         <h2 className={styles.ecoTitle}>Apps, SaaS & Web Freelance</h2>
       </div>
 
-      {/* SUBSECCIÓN 02: SAAS POR SUSCRIPCIÓN (TARJETA PRINCIPAL GRANDE CON HOVER) */}
+      {/* SUBSECCIÓN 02: SAAS POR SUSCRIPCIÓN (TARJETA PRINCIPAL CON HOVER DERECHO EXTENSION) */}
       <div className={styles.subCategoria}>
         <h3 className={styles.subCategoriaTitle}>02. Software SaaS por Suscripción</h3>
         
-        <article className={styles.saasCardFeatured}>
-          {/* Video de fondo a pantalla completa de la card */}
-          <video
-            className={styles.bgVideo}
-            src={saasProduct.videoUrl}
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
+        <div className={styles.saasWrapper}>
+          <article className={styles.saasCardFeatured}>
+            {/* Video de fondo a pantalla completa de la card */}
+            <video
+              className={styles.bgVideo}
+              src={saasProduct.videoUrl}
+              autoPlay
+              loop
+              muted
+              playsInline
+            />
 
-          {/* Cabecera superior siempre visible */}
-          <div className={styles.webCardOverlayHeader}>
-            <h4 className={styles.cardTitle}>{saasProduct.titulo}</h4>
-            <span className={styles.badge}>{saasProduct.categoria}</span>
-          </div>
+            {/* Cabecera superior siempre visible */}
+            <div className={styles.webCardOverlayHeader}>
+              <h4 className={styles.cardTitle}>{saasProduct.titulo}</h4>
+              <span className={styles.badge}>{saasProduct.categoria}</span>
+            </div>
 
-          {/* Panel de información que emerge en HOVER */}
-          <div className={styles.hoverInfoPanel}>
-            <p className={styles.cardDesc}>{saasProduct.descripcion}</p>
-            <a
-              href={saasProduct.demoUrl}
-              className={styles.actionBtn}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Solicitar Demo en Vivo ➔
-            </a>
-          </div>
-        </article>
+            {/* Panel de información que emerge en HOVER (Original intacto) */}
+            <div className={styles.hoverInfoPanel}>
+              <p className={styles.cardDesc}>{saasProduct.descripcion}</p>
+              <a
+                href={saasProduct.demoUrl}
+                className={styles.actionBtn}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Solicitar Demo en Vivo ➔
+              </a>
+            </div>
+          </article>
+
+          {/* Panel de Tecnologías fuera del video a la derecha */}
+          <aside className={styles.saasTechPanel}>
+            <h5 className={styles.techPanelTitle}>// Stack Tecnológico</h5>
+            <div className={styles.techRow}>
+              <span className={styles.techLabel}>Frontend</span>
+              <span className={styles.techValue}>🌐 {saasProduct.tecnologias.frontend}</span>
+            </div>
+            <div className={styles.techRow}>
+              <span className={styles.techLabel}>Backend</span>
+              <span className={styles.techValue}>⚙️ {saasProduct.tecnologias.backend}</span>
+            </div>
+            <div className={styles.techRow}>
+              <span className={styles.techLabel}>API</span>
+              <span className={styles.techValue}>💬 {saasProduct.tecnologias.api}</span>
+            </div>
+            <div className={styles.techRow}>
+              <span className={styles.techLabel}>Database</span>
+              <span className={styles.techValue}>🗄️ {saasProduct.tecnologias.database}</span>
+            </div>
+          </aside>
+        </div>
       </div>
 
       {/* SUBSECCIÓN 03: PÁGINAS WEB FREELANCE */}

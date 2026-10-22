@@ -96,46 +96,6 @@
   display: block;
 }
 /* ----------------------------------------------------
-   02. CARD DESTACADA DE SAAS (VIDEO DE FONDO GRANDE + HOVER)
----------------------------------------------------- */
-.saasCardFeatured {
-  position: relative;
-  width: 80%;
-  height: 480px; /* Mayor altura que las cards web para destacar como principal */
-  background: #000;
-  border: 1px solid var(--border-strong, #3f3f46);
-  box-shadow: 8px 8px 0px var(--border-strong, #3f3f46);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  margin-left: 85px;
-}
-
-.saasCardFeatured:hover {
-  transform: translate(-3px, -3px);
-  border-color: var(--accent, #f97316);
-  box-shadow: 11px 11px 0px var(--accent, #f97316);
-}
-
-.saasCardFeatured:hover .bgVideo {
-  filter: brightness(0.5);
-  transform: scale(1.02);
-}
-
-.saasCardFeatured:hover .hoverInfoPanel {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-/* Ajuste responsive para móviles */
-@media (max-width: 768px) {
-  .saasCardFeatured {
-    height: 380px;
-  }
-}
-/* ----------------------------------------------------
    03. CARDS DE PÁGINAS WEB FREELANCE (VIDEO DE FONDO + HOVER)
 ---------------------------------------------------- */
 .webGrid {
@@ -295,8 +255,227 @@
   }
 }
 
+@media (max-width: 900px) {
+  .appCard {
+    grid-template-columns: 1fr;
+  }
+
+  .phoneMockup {
+    max-height: 360px;
+    margin: 0 auto;
+    width: 220px;
+  }
+
+  /* --- SAAS EN MÓVIL --- */
+  .saasWrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .saasCardFeatured {
+    width: 100%;
+    max-width: 340px;
+    height: 560px; /* Alto vertical tipo Reel */
+    transform: none !important;
+    border-radius: 16px;
+  }
+
+  .saasTechPanel {
+    position: relative;
+    right: auto;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+    box-shadow: 6px 6px 0px var(--border-strong, #3f3f46);
+  }
+
+  /* --- TARJETAS FREELANCE EN MÓVIL (FORMATO REEL) --- */
+  .webGrid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 32px;
+  }
+
+  .webCardVideo {
+    width: 100%;
+    max-width: 340px; /* Mismo ancho maximo que el Reel SaaS */
+    height: 560px;   /* Mismo alto vertical tipo Reel */
+    border-radius: 16px;
+  }
+}
+
 @media (max-width: 480px) {
   .ecosistemaContainer {
     padding: 60px 16px;
+  }
+}
+/* ----------------------------------------------------
+   02. CARD DESTACADA DE SAAS (RESPONSIVE & DESKTOP DUAL HOVER)
+---------------------------------------------------- */
+.saasWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.saasCardFeatured {
+  position: relative;
+  width: 75%;
+  max-width: 800px;
+  height: 460px;
+  background: #000;
+  border: 1px solid var(--border-strong, #3f3f46);
+  box-shadow: 8px 8px 0px var(--border-strong, #3f3f46);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.2s ease, 
+              border-color 0.2s ease;
+  z-index: 2;
+}
+
+.saasCardFeatured:hover {
+  border-color: var(--accent, #f97316);
+  box-shadow: 11px 11px 0px var(--accent, #f97316);
+}
+
+.saasCardFeatured:hover .bgVideo {
+  filter: brightness(0.5);
+  transform: scale(1.02);
+}
+
+.saasCardFeatured:hover .hoverInfoPanel {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Panel de tecnologías (Escritorio: Absoluto a la derecha) */
+.saasTechPanel {
+  position: absolute;
+  right: calc(50% - 400px - 260px - 16px); /* Simétrico al ancho del card */
+  width: 240px;
+  height: 460px;
+  background: var(--surface, #18181b);
+  border: 1px solid var(--border-strong, #3f3f46);
+  box-shadow: 6px 6px 0px var(--border-strong, #3f3f46);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  z-index: 1;
+  
+  /* Oculto por defecto */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(30px);
+  pointer-events: none;
+  
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.35s ease, 
+              visibility 0.35s ease, 
+              border-color 0.35s ease, 
+              box-shadow 0.35s ease;
+}
+
+.techPanelTitle {
+  font-family: monospace, var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--accent, #f97316);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px dashed var(--border-strong, #3f3f46);
+  padding-bottom: 6px;
+  margin-bottom: 2px;
+}
+
+.techRow {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-strong, #3f3f46);
+  padding: 8px 10px;
+}
+
+.techLabel {
+  font-family: monospace, var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-muted, #a1a1aa);
+  text-transform: uppercase;
+}
+
+.techValue {
+  font-family: monospace, var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text, #ffffff);
+}
+
+/* ----------------------------------------------------
+   HOVER SOLO EN ESCRITORIO (> 900px)
+---------------------------------------------------- */
+@media (min-width: 901px) {
+  .saasWrapper:hover .saasCardFeatured {
+    transform: translateX(-130px);
+  }
+
+  .saasWrapper:hover .saasTechPanel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+    border-color: var(--accent, #f97316);
+    box-shadow: 9px 9px 0px var(--accent, #f97316);
+  }
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE PARA TABLETS Y MÓVILES (<= 900px) - FORMATO REEL
+---------------------------------------------------- */
+@media (max-width: 900px) {
+  .saasWrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .saasCardFeatured {
+    width: 100%;
+    max-width: 340px; /* Ancho máximo ideal para formato vertical tipo reel */
+    height: 580px;   /* Altura estirada tipo historia/reel (proporción vertical) */
+    transform: none !important;
+    border-radius: 16px; /* Bordes ligeramente redondeados estilo app móvil */
+  }
+
+  /* Ajuste para que el video acompañe el formato vertical */
+  .saasCardFeatured .bgVideo {
+    object-fit: cover;
+  }
+
+  /* El panel de tecnologías se acomoda ordenado debajo de la card vertical */
+  .saasTechPanel {
+    position: relative;
+    right: auto;
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+    box-shadow: 6px 6px 0px var(--border-strong, #3f3f46);
   }
 }
