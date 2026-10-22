@@ -443,9 +443,40 @@
 }
 
 /* ----------------------------------------------------
-   RESPONSIVE PARA TABLETS Y MÓVILES (<= 900px) - FORMATO REEL
+   CONTROL DE VIDEOS SEGÚN RESOLUCIÓN (DESKTOP VS MOBILE)
+---------------------------------------------------- */
+.bgVideoDesktop {
+  display: block;
+}
+
+.bgVideoMobile {
+  display: none;
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE PARA TABLETS Y MÓVILES (<= 900px)
 ---------------------------------------------------- */
 @media (max-width: 900px) {
+  /* Intercambiar visibilidad de videos */
+  .bgVideoDesktop {
+    display: none !important;
+  }
+
+  .bgVideoMobile {
+    display: block !important;
+  }
+
+  .appCard {
+    grid-template-columns: 1fr;
+  }
+
+  .phoneMockup {
+    max-height: 360px;
+    margin: 0 auto;
+    width: 220px;
+  }
+
+  /* --- SAAS EN MÓVIL --- */
   .saasWrapper {
     flex-direction: column;
     gap: 20px;
@@ -454,28 +485,43 @@
 
   .saasCardFeatured {
     width: 100%;
-    max-width: 340px; /* Ancho máximo ideal para formato vertical tipo reel */
-    height: 580px;   /* Altura estirada tipo historia/reel (proporción vertical) */
+    max-width: 350px; /* Ancho exacto Reel / Pantalla Smartphone */
+    height: 800px;    /* Alto exacto Reel / Pantalla Smartphone */
     transform: none !important;
-    border-radius: 16px; /* Bordes ligeramente redondeados estilo app móvil */
+    border-radius: 20px;
   }
 
-  /* Ajuste para que el video acompañe el formato vertical */
-  .saasCardFeatured .bgVideo {
-    object-fit: cover;
-  }
-
-  /* El panel de tecnologías se acomoda ordenado debajo de la card vertical */
   .saasTechPanel {
     position: relative;
     right: auto;
     width: 100%;
-    max-width: 340px;
+    max-width: 393px; /* Acompaña el ancho del card */
     height: auto;
     opacity: 1;
     visibility: visible;
     transform: none;
     pointer-events: auto;
     box-shadow: 6px 6px 0px var(--border-strong, #3f3f46);
+  }
+
+  /* --- TARJETAS FREELANCE EN MÓVIL (FORMATO REEL 393x852) --- */
+  .webGrid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 36px;
+  }
+
+  .webCardVideo {
+    width: 100%;
+    height: fit-content;    /* Alto exacto Reel */
+  }
+}
+
+/* Ajuste fino para pantallas con ancho menor a 400px */
+@media (max-width: 420px) {
+  .saasCardFeatured,
+  .webCardVideo {
+    max-width: 100%;
+    height: calc(100vw * (852 / 393)); /* Mantiene la proporción 393:852 sin desbordar el viewport */
   }
 }
