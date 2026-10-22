@@ -6,31 +6,38 @@
   scroll-margin-top: 80px;
 }
 
-/* Section header (shared pattern) */
+/* SECTION HEADER */
 .head {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 12px;
-  margin-bottom: 48px;
+  gap: 10px;
+  margin-bottom: 56px;
 }
 
 .eyebrow {
-  font-family: var(--font-head);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-family: monospace, var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--accent-2);
+  color: var(--accent, #f97316);
+  background: var(--surface, #18181b);
+  border: 1px solid var(--border-strong, #3f3f46);
+  padding: 4px 12px;
 }
 
 .title {
-  font-size: clamp(2rem, 4.5vw, 2.9rem);
-  font-weight: 700;
-  color: var(--text);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  color: var(--text, #e4e4e7);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1;
 }
 
+/* INFO GRID */
 .info {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -38,83 +45,108 @@
   align-items: start;
 }
 
+/* SOBRE MÍ - TARJETA PRINCIPAL */
 .infosobre {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 36px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  background: var(--surface, #18181b);
+  border: 1px solid var(--border-strong, #3f3f46);
+  border-radius: 0px; /* Ortogonal / Sin curvatura */
+  box-shadow: 6px 6px 0px var(--border-strong, #3f3f46);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.infosobre:hover {
+  border-color: var(--border-strong, #3f3f46);
+  box-shadow: 8px 8px 0px var(--accent, #f97316);
 }
 
 .infosobre p {
-  color: var(--text-muted);
-  line-height: 1.8;
+  color: var(--text-muted, #a1a1aa);
+  line-height: 1.75;
   font-size: 1rem;
 }
 
 .infosobre .firma {
-  margin-top: 6px;
-  color: var(--text);
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-strong, #3f3f46);
+  color: var(--text, #ffffff);
+  font-family: monospace, var(--font-mono);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .infosobre .firma strong {
-  color: var(--accent-2);
-  font-family: var(--font-head);
+  color: var(--accent, #f97316);
+  font-weight: 800;
 }
 
-/* Interests card */
+/* LISTA DE INTERESES / SIDEBAR STICKY */
 .lista {
   position: sticky;
   top: 90px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
   padding: 32px;
-  background: linear-gradient(160deg, var(--surface-2), var(--surface));
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  background: var(--surface, #18181b);
+  border: 1px solid var(--border-strong, #3f3f46);
+  border-radius: 0px;
+  box-shadow: 6px 6px 0px var(--border-strong, #3f3f46);
 }
 
 .listaTitle {
-  font-family: var(--font-head);
-  font-weight: 600;
+  font-family: monospace, var(--font-mono);
+  font-weight: 800;
   font-size: 1.1rem;
-  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text, #ffffff);
+  border-bottom: 2px solid var(--accent, #f97316);
+  padding-bottom: 8px;
 }
 
 .lista ul {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   list-style: none;
 }
 
 .lista li {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 14px;
-  border-radius: var(--radius-sm);
-  color: var(--text-muted);
-  font-size: 0.98rem;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 0px;
+  background: var(--bg-industrial, #0e0e10);
+  border: 1px solid var(--border-strong, #3f3f46);
+  color: var(--text-muted, #a1a1aa);
+  font-family: monospace, var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
 }
 
 .lista li:hover {
-  background: var(--accent-soft);
-  color: var(--text);
-  transform: translateX(4px);
+  background: var(--accent, #f97316);
+  color: #000;
+  border-color: #000;
+  transform: translateX(6px);
+  box-shadow: 2px 2px 0px #000;
 }
 
 .emoji {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1;
 }
 
+/* RESPONSIVE */
 @media (max-width: 860px) {
   .info {
     grid-template-columns: 1fr;
@@ -127,10 +159,14 @@
 
 @media (max-width: 480px) {
   .informacionContainer {
-    padding: 70px 18px;
+    padding: 70px 16px;
   }
 
   .infosobre {
-    padding: 26px;
+    padding: 24px;
+  }
+
+  .lista {
+    padding: 24px;
   }
 }

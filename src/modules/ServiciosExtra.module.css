@@ -1,0 +1,302 @@
+.ecosistemaContainer {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+  border-top: 2px dashed var(--border-strong, #3f3f46);
+} 
+
+/* CABECERA PRINCIPAL */
+.ecoHead {
+  text-align: left;
+  margin-bottom: 50px;
+  border-left: 4px solid var(--accent, #f97316);
+  padding-left: 18px;
+}
+
+.ecoEyebrow {
+  font-family: monospace, var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent, #f97316);
+}
+
+.ecoTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--text, #e4e4e7);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+/* SUBSECCIONES */
+.subCategoria {
+  margin-bottom: 70px;
+}
+
+.subCategoriaTitle {
+  font-family: monospace, var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text, #ffffff);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.subCategoriaTitle::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background: var(--border-strong, #3f3f46);
+}
+
+/* ----------------------------------------------------
+   01. CARD DE APPS EN GOOGLE PLAY (LAYOUT MOCKUP TELÉFONO)
+---------------------------------------------------- */
+.appCard {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  background: var(--surface, #18181b);
+  border: 1px solid var(--border-strong, #3f3f46);
+  padding: 24px;
+  box-shadow: 8px 8px 0px var(--border-strong, #3f3f46);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  align-items: center;
+}
+
+.appCard:hover {
+  transform: translate(-3px, -3px);
+  border-color: var(--accent, #f97316);
+  box-shadow: 11px 11px 0px var(--accent, #f97316);
+}
+
+/* Mockup Teléfono */
+.phoneMockup {
+  width: 100%;
+  aspect-ratio: 9 / 19;
+  max-height: 420px;
+  background: #000;
+  border: 4px solid var(--border-strong, #3f3f46);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 4px 4px 0px #000;
+}
+
+.phoneMockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* ----------------------------------------------------
+   02. CARD DESTACADA DE SAAS (VIDEO DE FONDO GRANDE + HOVER)
+---------------------------------------------------- */
+.saasCardFeatured {
+  position: relative;
+  width: 80%;
+  height: 480px; /* Mayor altura que las cards web para destacar como principal */
+  background: #000;
+  border: 1px solid var(--border-strong, #3f3f46);
+  box-shadow: 8px 8px 0px var(--border-strong, #3f3f46);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  margin-left: 85px;
+}
+
+.saasCardFeatured:hover {
+  transform: translate(-3px, -3px);
+  border-color: var(--accent, #f97316);
+  box-shadow: 11px 11px 0px var(--accent, #f97316);
+}
+
+.saasCardFeatured:hover .bgVideo {
+  filter: brightness(0.5);
+  transform: scale(1.02);
+}
+
+.saasCardFeatured:hover .hoverInfoPanel {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Ajuste responsive para móviles */
+@media (max-width: 768px) {
+  .saasCardFeatured {
+    height: 380px;
+  }
+}
+/* ----------------------------------------------------
+   03. CARDS DE PÁGINAS WEB FREELANCE (VIDEO DE FONDO + HOVER)
+---------------------------------------------------- */
+.webGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(700px, 400px));
+  gap: 28px;
+  justify-content: center;
+}
+
+.webCardVideo {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background: #000;
+  border: 1px solid var(--border-strong, #3f3f46);
+  box-shadow: 6px 6px 0px var(--border-strong, #3f3f46);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.webCardVideo:hover {
+  transform: translate(-3px, -3px);
+  border-color: var(--accent, #f97316);
+  box-shadow: 9px 9px 0px var(--accent, #f97316);
+}
+
+/* Video abarcando toda la tarjeta */
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.85);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.webCardVideo:hover .bgVideo {
+  filter: brightness(0.5);
+  transform: scale(1.03);
+}
+
+/* Cabecera superior fija sobre el video */
+.webCardOverlayHeader {
+  position: relative;
+  z-index: 2;
+  padding: 16px 20px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Panel de información emergente en HOVER (ocupa aprox la mitad de la card) */
+.hoverInfoPanel {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background: rgba(18, 18, 20, 0.75); /* Fondo oscuro transparente */
+  backdrop-filter: blur(8px);          /* Efecto vidrio esmerilado */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transform: translateY(100%);         /* Oculto hacia abajo */
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+/* Mostrar panel al hacer hover */
+.webCardVideo:hover .hoverInfoPanel {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* ESTILOS COMUNES DE CONTENIDO DE TARJETAS */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 12px 0;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardTitle {
+  font-family: monospace, var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text, #ffffff);
+  text-transform: uppercase;
+}
+
+.badge {
+  font-family: monospace, var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--bg-industrial, #0e0e10);
+  color: var(--accent, #f97316);
+  border: 1px solid var(--border-strong, #3f3f46);
+  padding: 3px 10px;
+  white-space: nowrap;
+}
+
+.cardDesc {
+  color: var(--text-muted, #a1a1aa);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-family: monospace, var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000;
+  background: var(--accent, #f97316);
+  border: 1px solid #000;
+  box-shadow: 3px 3px 0px #000;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.actionBtn:hover {
+  background: #ffffff;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .appCard,
+  .saasCard {
+    grid-template-columns: 1fr;
+  }
+
+  .phoneMockup {
+    max-height: 360px;
+    margin: 0 auto;
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ecosistemaContainer {
+    padding: 60px 16px;
+  }
+}

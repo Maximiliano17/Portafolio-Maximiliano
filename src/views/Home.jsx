@@ -6,6 +6,7 @@ import fotoPerfil from "../assets/fotos/avatar_perfil.jpeg"
 import Informacion from "./Informacion"
 import Proyectos from "./Proyectos"
 import Contacto from "./Contacto"
+import ServiciosExtra from "./Extra"
 
 const stack = ["React", "Angular", "TypeScript", "Node.js", "React Native", "MongoDB"]
 
@@ -69,6 +70,7 @@ function Home() {
 
         <Informacion />
         <Contacto />
+        <ServiciosExtra />
         <Proyectos />
 
         <footer className={styles.footer}>
